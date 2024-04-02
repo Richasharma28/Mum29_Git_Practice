@@ -1,0 +1,31 @@
+if(availableticket>nooftickets)
+		{
+			
+			int remainingticket= availableticket-nooftickets;
+			System.out.println("Available tickets:"+Ticket.getAvailableTickets());
+			System.out.println("Total amount:"+t.calculateTicketCost(nooftickets));
+			System.out.println("Available ticket after booking:"+remainingticket);
+			 int temp = remainingticket;
+			 remainingticket = availableticket;
+			 availableticket = temp;
+		}
+		else if (availableticket== nooftickets)
+		{
+			System.out.println("Available tickets:"+availableticket);
+			System.out.println("Total amount:"+t.calculateTicketCost(nooftickets));
+			System.out.println("House full");
+			break;
+		}
+		else if(nooftickets>availableticket)
+		{
+			System.out.println("Available tickets:"+availableticket);
+			System.out.println("Tickets are not available");		
+			continue;
+		}
+		else
+		{
+			return;
+		}
+		
+		}	
+		
